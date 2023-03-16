@@ -106,6 +106,26 @@ for(let index = 0; index < finances.length; index++){
             net = finances [index][index2];
             netArray.push(change);
             console.log(`total: ${total}`);
+            console.log(`change: ${change}`);
+            console.log(`net: ${net}`);
+            console.log(`netArray: ${netArray}`);
         }
     }
 }
+
+for(let index = 0; index < netArray.length; index++){
+    netChangeSum = netChangeSum + netArray[index];
+}
+
+average = Math.round((netChangeSum / 86) * 100) /100;
+
+analysis = `
+Financial Analysis
+------------------
+Total Months: ${months}
+Total: $ ${total}
+Average Change: 1
+
+`
+
+console.log(analysis)
